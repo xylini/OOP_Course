@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.edu.agh.iisg.to.javafx.cw1.controller.AccountOverviewController">
+	<center>
+		<TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" fx:id="transactionsTable">
+			<columns>
+				<TableColumn prefWidth="75.0" text="Date" fx:id="dateColumn"/>
+				<TableColumn prefWidth="75.0" text="Payee" fx:id="payeeColumn"/>
+				<TableColumn prefWidth="75.0" text="Category" fx:id="categoryColumn"/>
+				<TableColumn prefWidth="75.0" text="Inflow" fx:id="inflowColumn"/>
+			</columns>
+		</TableView>
+	</center>
+	<right>
+		<VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+			<opaqueInsets>
+				<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+			</opaqueInsets>
+			<children>
+				<Button alignment="TOP_CENTER" maxWidth="100" mnemonicParsing="false" fx:id="deleteButton" onAction="#handleDeleteAction" text="Delete">
+					<VBox.margin>
+						<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+					</VBox.margin></Button>
+			</children>
+			<BorderPane.margin>
+				<Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+			</BorderPane.margin>
+		</VBox>
+	</right>
+</BorderPane>
